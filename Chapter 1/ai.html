@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First Website</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #222;
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        #clock {
+            font-size: 22px;
+            font-weight: bold;
+            color: #00ff99;
+        }
+
+        main {
+            padding: 25px;
+        }
+
+        a {
+            color: blue;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        li {
+            margin: 12px 0;
+        }
+
+        footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 12px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>My Website</h1>
+
+        <!-- Digital Clock -->
+        <div id="clock">00:00:00</div>
+    </header>
+
+    <main>
+
+        <h2>Welcome to My Website!</h2>
+
+        <p>This is my first HTML webpage.</p>
+
+        <h2>Useful Websites</h2>
+
+        <ul>
+            <li>
+                <a href="https://www.google.com" target="_blank">
+                    Google
+                </a>
+            </li>
+
+            <li>
+                <a href="https://www.facebook.com" target="_blank">
+                    Facebook
+                </a>
+            </li>
+
+            <li>
+                <a href="https://www.youtube.com" target="_blank">
+                    YouTube
+                </a>
+            </li>
+
+            <li>
+                <a href="https://www.instagram.com" target="_blank">
+                    Instagram
+                </a>
+            </li>
+
+            <li>
+                <a href="https://www.github.com" target="_blank">
+                    GitHub
+                </a>
+            </li>
+        </ul>
+
+    </main>
+
+    <footer>
+        <p>Thank you for visiting my website!</p>
+    </footer>
+
+    <script>
+        function updateClock() {
+            let now = new Date();
+
+            let hours = String(now.getHours()).padStart(2, '0');
+            let minutes = String(now.getMinutes()).padStart(2, '0');
+            let seconds = String(now.getSeconds()).padStart(2, '0');
+
+            document.getElementById("clock").innerHTML =
+                hours + ":" + minutes + ":" + seconds;
+        }
+
+        // Update clock every second
+        updateClock();
+        setInterval(updateClock, 1000);
+    </script>
+
+</body>
+</html>
