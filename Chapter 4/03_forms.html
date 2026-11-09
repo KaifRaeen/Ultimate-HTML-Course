@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Forms</title>
+
+<style>
+    /* General Styling */
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        margin: 0;
+        padding: 40px 15px;
+        min-height: 100vh;
+    }
+
+    /* Form Styling */
+    form {
+        background-color: white;
+        max-width: 500px;
+        margin: auto;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Form Heading (optional) */
+    form::before {
+        content: "Registration Form";
+        display: block;
+        font-size: 26px;
+        font-weight: bold;
+        text-align: center;
+        color: #764ba2;
+        margin-bottom: 25px;
+    }
+
+    /* Input Groups */
+    form div {
+        margin-bottom: 18px;
+    }
+
+    /* Labels */
+    label {
+        display: inline-block;
+        font-size: 14px;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 8px;
+    }
+
+    /* Text Inputs, Select and Textarea */
+    input[type="text"],
+    input[type="tel"],
+    input[type="email"],
+    input[type="password"],
+    input[type="date"],
+    select,
+    textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 7px;
+        font-size: 14px;
+        outline: none;
+        transition: 0.3s;
+        background-color: #fafafa;
+    }
+
+    /* Focus Effect */
+    input:focus,
+    select:focus,
+    textarea:focus {
+        border-color: #764ba2;
+        background-color: white;
+        box-shadow: 0 0 5px rgba(118, 75, 162, 0.3);
+    }
+
+    /* Radio Buttons */
+    input[type="radio"] {
+        accent-color: #764ba2;
+        margin-right: 5px;
+        cursor: pointer;
+    }
+
+    /* Checkboxes */
+    input[type="checkbox"] {
+        accent-color: #764ba2;
+        cursor: pointer;
+    }
+
+    /* Radio and Checkbox Labels */
+    input[type="radio"] + label,
+    input[type="checkbox"] + label {
+        font-weight: normal;
+        margin-right: 12px;
+        cursor: pointer;
+    }
+
+    /* Textarea */
+    textarea {
+        resize: vertical;
+    }
+
+    /* Submit Button */
+    button {
+        width: 100%;
+        padding: 13px;
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        color: white;
+        border: none;
+        border-radius: 7px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    button:hover {
+        background: linear-gradient(135deg, #764ba2, #667eea);
+        transform: translateY(-2px);
+        box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 480px) {
+        form {
+            padding: 20px;
+        }
+
+        form::before {
+            font-size: 22px;
+        }
+    }
+</style>
+
+</head>
+<body> 
+
+    <!-- Form starts here -->
+    <form action="/submit.php">
+        <!-- Text input for Name -->
+        <div>
+            <label for="name">Name</label>
+            <input id="name" type="text" placeholder="Enter Name" required>
+        </div>
+
+        <!-- Phone input -->
+        <div>
+            <label for="ph">Phone</label>
+            <input id="ph" type="tel" placeholder="Enter Phone" required>
+        </div>
+
+        <!-- Email input -->
+        <div>
+            <label for="email">Email</label>
+            <input id="email" type="email" placeholder="Enter Email" required>
+        </div>
+
+        <!-- Password input -->
+        <div>
+            <label for="password">Password</label>
+            <input id="password" type="password" placeholder="Enter Password" required>
+        </div>
+
+        <!-- Date input -->
+        <div>
+            <label for="dob">Date of Birth</label>
+            <input id="dob" type="date" required>
+        </div>
+
+        <!-- Dropdown (select input) for Gender -->
+        <div>
+            <label for="gender">Gender</label>
+            <select id="gender" required>
+                <option value="" disabled selected>Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+
+        <!-- Radio buttons for Subscription Plan -->
+        <div>
+            <p>Subscription Plan</p>
+            <input id="basic" type="radio" name="subscription" value="basic">
+            <label for="basic">Basic</label>
+
+            <input id="premium" type="radio" name="subscription" value="premium">
+            <label for="premium">Premium</label>
+
+            <input id="vip" type="radio" name="subscription" value="vip">
+            <label for="vip">VIP</label>
+        </div>
+
+        <!-- Checkbox for agreeing to terms -->
+        <div>
+            <input id="terms" type="checkbox" required>
+            <label for="terms">I agree to the terms and conditions</label>
+        </div>
+
+        <!-- Textarea for Comments -->
+        <div>
+            <label for="comments">Comments</label>
+            <textarea id="comments" placeholder="Enter your comments" rows="4"></textarea>
+        </div>
+
+        <!-- Submit button -->
+        <div>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+    <!-- Form ends here -->
+    
+</body>
+</html>

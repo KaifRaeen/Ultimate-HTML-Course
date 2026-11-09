@@ -1,0 +1,113 @@
+
+/* Universal Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px;
+}
+
+/* Heading Styling */
+h1 {
+    color: #ffffff;
+    font-size: 32px;
+    margin-bottom: 25px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Form Styling */
+form {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 450px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Form Div Styling */
+form div {
+    margin-bottom: 20px;
+}
+
+/* Label Styling */
+label {
+    display: block;
+    font-size: 15px;
+    font-weight: bold;
+    color: #333333;
+    margin-bottom: 8px;
+}
+
+/* Input and Textarea Styling */
+input,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+    transition: 0.3s ease;
+}
+
+/* Input Focus Effect */
+input:focus,
+textarea:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 6px rgba(52, 152, 219, 0.3);
+}
+
+/* Textarea Styling */
+textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+/* Button Styling */
+button {
+    width: 100%;
+    padding: 13px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+/* Button Hover Effect */
+button:hover {
+    background-color: #217dbb;
+    transform: translateY(-2px);
+}
+
+/* Button Active Effect */
+button:active {
+    transform: translateY(0);
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 26px;
+    }
+
+    form {
+        padding: 22px;
+    }
+}
